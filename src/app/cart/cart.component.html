@@ -1,0 +1,24 @@
+<div class="cart-container">
+    <h1 class="heading">Add Teachers to class</h1>
+    <div class="cards">
+      <div class="card" *ngFor="let teacher of teachers; let i = index">
+        <div class="bg"></div>
+        <div class="blob"></div>
+        <div class="content">
+            <h2>{{ teacher.name }}</h2>
+            <p>{{ teacher.department }}</p>
+            <button (click)="addToCart(teacher)">Add to Class</button>
+        </div>
+      </div>
+    </div>
+    <div class="cart">
+      <h2>Class</h2>
+      <ul>
+        <li *ngFor="let staff of cart; let i = index">
+          <span>{{ staff.name }} - {{ staff.department }}</span>
+          <button (click)="removeFromCart(i)">Delete</button>
+          <button [routerLink]="['/detail', staff]" [queryParams]="{ name: staff.name, department: staff.department }">Staff detail</button>
+        </li>
+      </ul>
+    </div>
+  </div>

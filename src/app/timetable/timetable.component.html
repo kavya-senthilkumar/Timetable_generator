@@ -1,0 +1,23 @@
+<div *ngFor="let class of classes">
+    <h2>{{ class.name }}</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Day / Period</th>
+          <th *ngFor="let period of [].constructor(timetableService.periods); let i = index">{{ i + 1 }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let day of timetableService.days">
+          <td>{{ day }}</td>
+          <td *ngFor="let period of [].constructor(timetableService.periods); let i = index">
+            <div *ngIf="timetable[class.id][day][i]">
+              {{ timetable[class.id][day][i].subject }}<br>
+              {{ timetable[class.id][day][i].teacher.name }}
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

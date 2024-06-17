@@ -1,0 +1,68 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+/* Timetable container styles */
+.timetable-container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading style */
+.timetable-container h2 {
+  color: #333333;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  border-bottom: 2px solid #4caf50; /* Green border bottom */
+  padding-bottom: 10px;
+}
+
+/* Table styles */
+.timetable-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Added margin top */
+}
+
+/* Table header styles */
+.timetable-container th {
+  background-color: #535353;
+  color: white;
+  padding: 12px; /* Increased padding */
+  font-size: 1.1em; /* Increased font size */
+  text-align: center;
+  border: 1px solid #535353; /* Matching border color */
+}
+
+/* Table cell styles */
+.timetable-container td {
+  border: 1px solid #ddd;
+  padding: 12px; /* Increased padding */
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Div inside table cell styles */
+.timetable-container td div {
+  padding: 5px;
+}
+
+/* Alternate row styles */
+.timetable-container tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect on table rows */
+.timetable-container tr:hover {
+  background-color: #ddd;
+}
+

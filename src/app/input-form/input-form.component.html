@@ -1,0 +1,14 @@
+<div class="input-form">
+  <h2>Enter Details</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="numClasses">Number of Classes:</label>
+      <input type="number" id="numClasses" [(ngModel)]="numClasses" name="numClasses" required>
+    </div>
+    <div>
+      <label for="numTeachers">Number of Teachers:</label>
+      <input type="number" id="numTeachers" [(ngModel)]="numTeachers" name="numTeachers" required>
+    </div>
+    <button type="submit">Generate Timetable</button>
+  </form>
+</div>

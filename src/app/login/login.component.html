@@ -1,0 +1,22 @@
+<!-- src/app/login/login.component.html -->
+<div class="container">
+  <h2>Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="email">Email</label>
+      <input id="email" formControlName="email">
+      <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+        Enter a valid email
+      </div>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password">
+      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+        Password is required
+      </div>
+    </div>
+    <p>Don't have an account? <a routerLink="/register">Register here</a> </p>
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
+  </form>
+</div>
